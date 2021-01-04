@@ -102,8 +102,9 @@ p {
   padding-top: 0;
   padding-bottom: 0;
 }
+
 .navbar-brand {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 .navbar a {
@@ -121,17 +122,17 @@ p {
 
 .nav-item {
   background: transparent;
-  border-left: 1px solid #ccc;
+  /* border-left: 1px solid #ccc; */
   cursor: pointer;
   font-size: 0.8rem;
-  font-weight: 300;
+  font-weight: 500;
   text-transform: uppercase;
   padding: 0;
   transition: all 0.5s ease;
 }
 
 .nav-item:last-child {
-  border-right: 1px solid #ccc;
+  /* border-right: 1px solid #ccc; */
 }
 
 .nav-link.active,
@@ -141,7 +142,7 @@ p {
 }
 
 .tm-top-bar .navbar-expand-lg .navbar-nav .nav-link {
-  padding: 50px 35px;
+  padding: 40px 25px;
 }
 
 .tm-top-bar {
@@ -152,12 +153,12 @@ p {
   padding: 0;
   z-index: 10000;
   transition: all 0.2s ease-in-out;
-  height: 119px;
+  height: 100px;
   background: white;
 }
 
 .tm-top-bar.active {
-  height: 79px;
+  height: 65px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
@@ -165,7 +166,7 @@ p {
   padding: 30px 35px;
 }
 .tm-top-bar-bg {
-  height: 119px;
+  height: 100px;
 }
 .tm-section {
   min-height: 515px;
@@ -178,6 +179,7 @@ p {
 
 #tm-section-1 {
   background-image: url("../img/herobg.jpg");
+  background-size: cover;
 }
 
 #tm-section-5 {
@@ -684,7 +686,7 @@ video {
 }
 
 .myrow {
-  background: #ee5057;
+  background: #ffffff;
 }
 
 @media all and (max-width: 1199px) and (-ms-high-contrast: none),
@@ -706,4 +708,44 @@ video {
     max-width: 530px;
     width: 100%;
   }
+}
+
+.profile-card-4 {
+  width: 100%;
+  height: 500px;
+}
+
+.profile-card-4 .card-img-block {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  top: -20px;
+  height: 30%;
+}
+
+.profile-card-4 .card-img-block img {
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  height: 250px;
+}
+.profile-card-4 .card-body {
+  margin-top: 120px;
+}
+
+.profile-card-4 h3 {
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.profile-card-4 p {
+  margin-left: 10px;
+}
+
+section {
+  float: left;
+  width: 100%;
+  background: #f4f4f4; /* fallback for old browsers */
+  padding: 30px 0;
 }

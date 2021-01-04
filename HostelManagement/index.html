@@ -29,7 +29,7 @@
         <!-- Top Navbar -->
         <div class="container">
           <div class="row">
-            <nav class="navbar navbar-expand-lg narbar-light">
+            <nav class="navbar navbar-expand-lg navbar-light">
               <a class="navbar-brand mr-auto" href="#">
                 <img src="img/logo.png" alt="Site logo" />
                 Hostel Management
@@ -52,15 +52,22 @@
                       >Home <span class="sr-only">(current)</span></a
                     >
                   </li>
+
                   <li class="nav-item">
                     <a class="nav-link" href="#tm-section-6">Contact Us</a>
                   </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="#tm-section-6">Login / Register</a>
+                  </li>
+              
                 </ul>
               </div>
             </nav>
           </div>
         </div>
       </div>
+
       <!-- Hero Section Starts -->
       <div class="tm-section tm-bg-img" id="tm-section-1">
         <div class="tm-bg-white ie-container-width-fix-2">
@@ -72,7 +79,7 @@
                   method="get"
                   class="tm-search-form tm-section-pad-2 myrow"
                 >
-                  <div class="form-row tm-search-form-row ">
+                  <div class="form-row tm-search-form-row">
                     <div class="form-group tm-form-element tm-form-element-2">
                       <select
                         name="State"
@@ -85,6 +92,9 @@
                         <option data-ref="up">Uttar Pradesh</option>
                         <option data-ref="rj">Rajasthan</option>
                       </select>
+                      <i
+                        class="fa fa-map-marker fa-2x tm-form-element-icon"
+                      ></i>
                     </div>
 
                     <div class="form-group tm-form-element tm-form-element-2">
@@ -112,6 +122,9 @@
                           Ambedkar Nagar
                         </option>
                       </select>
+                      <i
+                        class="fa fa-map-marker fa-2x tm-form-element-icon"
+                      ></i>
                     </div>
                     <div class="form-group tm-form-element tm-form-element-2">
                       <select
@@ -128,11 +141,14 @@
                         <option data-ref="fb" data-belong="cd">...</option>
                         <option data-ref="an" data-belong="cd">...</option>
                       </select>
+                      <i
+                        class="fa fa-map-marker fa-2x tm-form-element-icon"
+                      ></i>
                     </div>
                     <div class="form-group tm-form-element tm-form-element-2">
                       <button
                         type="submit"
-                        class="btn tm-btn-white-bordered tm-btn-search"
+                        class="btn btn-primary tm-btn-search"
                       >
                         Check Availability
                       </button>
@@ -140,7 +156,7 @@
                   </div>
 
                   <div class="form-row clearfix pl-2 pr-2 tm-fx-col-xs">
-                    <p class="tm-margin-b-0 text-light">
+                    <p class="tm-margin-b-0">
                       Enter where you want to search hostels
                     </p>
                   </div>
@@ -148,51 +164,78 @@
               </div>
             </div>
             <div class="row myrow">
-                <div class="col-xs-6 ml-auto mr-auto ie-container-width-fix">
-                  <form
-                    action="index.html"
-                    method="get"
-                    class="tm-search-form tm-section-pad-2 myrow"
-                  >
-                    <div class="form-row tm-search-form-row ">
-                      <div class="form-group tm-form-element tm-form-element-2">
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label text-light" for="exampleCheck1">Goverment</label>
-                          </div>
+              <div class="col-xs-6 ie-container-width-fix">
+                <form
+                  action="index.html"
+                  method="get"
+                  class="tm-search-form tm-section-pad-2 myrow"
+                >
+                  <div class="form-row tm-search-form-row">
+                    <div class="form-group tm-form-element tm-form-element-2">
+                      <div class="form-group form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="exampleCheck1"
+                        />
+                        <label class="form-check-label" for="exampleCheck1"
+                          >Goverment</label
+                        >
                       </div>
-  
-                      <div class="form-group tm-form-element tm-form-element-2">
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label text-light" for="exampleCheck1">Private</label>
-                          </div>
-                      </div>
-                      <div class="form-group tm-form-element tm-form-element-2">
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label text-light" for="exampleCheck1">Semi-Govt</label>
-                          </div>
-                      </div>
-                      <div class="form-group tm-form-element tm-form-element-2">
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label text-light" for="exampleCheck1">Boys</label>
-                          </div>
-                      </div>
-                      <div class="form-group tm-form-element tm-form-element-2">
-                        <div class="form-group form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label text-light" for="exampleCheck1">Girls</label>
-                          </div>
-                      </div>
-                     
                     </div>
-  
-            
-                  </form>
-                </div>
+
+                    <div class="form-group tm-form-element tm-form-element-2">
+                      <div class="form-group form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="exampleCheck1"
+                        />
+                        <label class="form-check-label" for="exampleCheck1"
+                          >Private</label
+                        >
+                      </div>
+                    </div>
+                    <div class="form-group tm-form-element tm-form-element-2">
+                      <div class="form-group form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="exampleCheck1"
+                        />
+                        <label class="form-check-label" for="exampleCheck1"
+                          >Semi-Govt</label
+                        >
+                      </div>
+                    </div>
+                    <div class="form-group tm-form-element tm-form-element-2">
+                      <div class="form-group form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="exampleCheck1"
+                        />
+                        <label class="form-check-label" for="exampleCheck1"
+                          >Boys</label
+                        >
+                      </div>
+                    </div>
+                    <div class="form-group tm-form-element tm-form-element-2">
+                      <div class="form-group form-check">
+                        <input
+                          type="checkbox"
+                          class="form-check-input"
+                          id="exampleCheck1"
+                        />
+                        <label class="form-check-label" for="exampleCheck1"
+                          >Girls</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </form>
               </div>
+            </div>
           </div>
         </div>
       </div>
@@ -209,7 +252,9 @@
               <p class="tm-color-white tm-section-subtitle">
                 Get in touch with us
               </p>
-              <a href="#tm-section-6" class="tm-color-white tm-btn-white-bordered mb-2"
+              <a
+                href="#tm-section-6"
+                class="tm-color-white tm-btn-white-bordered mb-2"
                 >Contact Us</a
               >
             </div>
@@ -219,16 +264,88 @@
 
       <!-- Help Section ends-->
 
-      <!-- Hostel Section starts -->
+      <!-- Card section -->
 
-      <div class="tm-section tm-section-pad tm-bg-gray" id="tm-section-4">
+      <section>
         <div class="container">
           <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
-              <div class="tm-article-carousel">
+            <div class="col-md-4">
+              <div class="card profile-card-4 mt-5">
+                <div class="card-img-block">
+                  <img src="/img/img-01.jpg" alt="" class="card-img-top" />
+                </div>
+                <div class="card-body p-1">
+                  <h3 class="text-uppercase tm-article-title-2">Hostel 1</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Doloribus unde vel praesentium enim, quae animi sint eos qui
+                    aperiam? Porro.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-                <article class="tm-bg-white mr-2 tm-carousel-item">
-                  <img src="img/img-01.jpg" alt="Image" class="img-fluid" />
+            <div class="col-md-4">
+              <div class="card profile-card-4 mt-5">
+                <div class="card-img-block">
+                  <img src="/img/img-01.jpg" alt="" class="card-img-top" />
+                </div>
+                <div class="card-body p-1">
+                  <h3 class="text-uppercase tm-article-title-2">HOSTEL 2</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Doloribus unde vel praesentium enim, quae animi sint eos qui
+                    aperiam? Porro.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card profile-card-4 mt-5">
+                <div class="card-img-block">
+                  <img src="/img/img-01.jpg"" alt="" class="card-img-top" />
+                </div>
+                <div class="card-body p-1">
+                  <h3 class="text-uppercase tm-article-title-2">hostel 3</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Doloribus unde vel praesentium enim, quae animi sint eos qui
+                    aperiam? Porro.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card profile-card-4 mt-5">
+                <div class="card-img-block">
+                  <img src="/img/img-01.jpg"" alt="" class="card-img-top" />
+                </div>
+                <div class="card-body p-1">
+                  <h3 class="text-uppercase tm-article-title-2">hostel 4</h3>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Doloribus unde vel praesentium enim, quae animi sint eos qui
+                    aperiam? Porro.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hostel Section starts -->
+
+      <!-- <div class="container-fluid tm-bg-gray " id="tm-section-4">
+        <div class="container p-5">
+          <div class="row ">
+
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+              <div class="tm-article-carousel"> -->
+
+      <!-- <article class="tm-bg-white mr-2 tm-carousel-item">
+                  <img src="img/img-01.jpg" alt="Image" class="img-fluid " />
                   <div class="tm-article-pad">
                     <header>
                       <h3 class="text-uppercase tm-article-title-2">
@@ -242,10 +359,11 @@
                       >Get More Info.</a
                     >
                   </div>
-                </article>
+                </article> -->
 
-                <article class="tm-bg-white mr-2 tm-carousel-item">
-                    <img src="img/img-01.jpg" alt="Image" class="img-fluid" />
+      <!-- 
+                <article class="tm-bg-white  ">
+                    <img src="img/img-01.jpg" alt="Image" class="pt-5 p-5" />
                     <div class="tm-article-pad">
                       <header>
                         <h3 class="text-uppercase tm-article-title-2">
@@ -255,7 +373,7 @@
                       <p>Information regarding this Hostel</p>
                       <a
                         href="#"
-                        class="text-uppercase btn-primary tm-btn-primary"
+                        class="text-uppercase btn-primary tm-btn-primary-small "
                         >Get More Info.</a
                       >
                     </div>
@@ -279,11 +397,11 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
-        <!-- Hostel Section ends -->
+      <!-- Hostel Section ends -->
 
-        <!-- contact us Section starts -->
+      <!-- contact us Section starts -->
 
       <div
         class="tm-section tm-section-pad tm-bg-img tm-position-relative"
@@ -366,9 +484,9 @@
         </div>
       </div>
 
-       <!-- contact Us Section ends -->
+      <!-- contact Us Section ends -->
 
-       <!-- Footer Section Starts -->
+      <!-- Footer Section Starts -->
 
       <footer class="tm-bg-dark-blue">
         <div class="container">
@@ -382,7 +500,6 @@
           </div>
         </div>
       </footer>
-    </div>
 
     <!-- Footer Section ends -->
 
