@@ -749,3 +749,21 @@ section {
   background: #f4f4f4; /* fallback for old browsers */
   padding: 30px 0;
 }
+
+.btn-compare {
+  background-color: #ee5057;
+  border-color: #ee5057;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 13px 20px;
+  text-transform: uppercase;
+}
+
+.btn-compare:hover,
+.btn-compare:focus,
+.btn-compare:active {
+  background-color: #d53239;
+  border-color: #d53239;
+}
