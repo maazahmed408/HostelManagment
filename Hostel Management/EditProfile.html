@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="css/EditProfile.css" />
+  </head>
+  <body>
+    <!-- multistep form -->
+    <form id="multistepsform">
+      <!-- progressbar -->
+      <ul id="progressbar">
+        <li class="active new">Personal Details</li>
+        <li>Family Details</li>
+        <li>Academics Qualifications</li>
+      </ul>
+      <!-- fieldsets -->
+
+      <fieldset>
+        <h2 class="fs-title">Personal Details</h2>
+        <h3 class="fs-subtitle"></h3>
+        <input type="text" name="name" placeholder="Name" />
+        <select class="Select" name="Gender">
+          <option value="" disabled selected>Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Any other</option>
+        </select>
+        <input
+          placeholder="Date Of Birth"
+          class="textbox-n"
+          type="text"
+          onfocus="(this.type='date')"
+          id="date"
+        />
+        <select class="Select" name="religion">
+          <option value="" disabled selected>Select Religion</option>
+          <option>Hinduism</option>
+          <option>Islam</option>
+          <option>Christianity</option>
+          <option>Sikhism</option>
+          <option>Buddhism</option>
+          <option>Jainism</option>
+          <option>Any other</option>
+        </select>
+        <select class="Select" name="caste">
+          <option value="" disabled selected>Select Your Caste</option>
+          <option>General</option>
+          <option>SC</option>
+          <option>ST</option>
+          <option>OBC</option>
+        </select>
+        <input type="number" name="adhaar" placeholder="Adhaar Number" />
+        <textarea name="address" placeholder="Address"></textarea>
+        <label for="files">Upload Caste Proof</label>
+        <input type="file" name="Caste Proof" placeholder="Caste Proof" />
+        <label for="files">Upload Address Proof</label>
+        <input type="file" name="Address Proof" placeholder="Address Proof" />
+
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Next"
+        />
+      </fieldset>
+
+      <fieldset>
+        <h2 class="fs-title">Family Details</h2>
+        <input type="text" name="fname" placeholder="Father's Name" />
+        <input type="text" name="mname" placeholder="Mother's Name" />
+        <input
+          type="text"
+          name="focuppation"
+          placeholder="Father's Occupation"
+        />
+        <input
+          type="text"
+          name="mocuppation"
+          placeholder="Mother's Occupation"
+        />
+        <input
+          type="number"
+          name="fincome"
+          placeholder="Father's Annual Income"
+        />
+        <input
+          type="number"
+          name="mincome"
+          placeholder="Mother's Annual Income"
+        />
+
+        <input type="text" name="gName" placeholder="Guardian Name" />
+        <input type="text" name="oincome" placeholder="Any other Income" />
+        <input type="number" name="siblings" placeholder="Number of Siblings" />
+        <select class="Select" name="only child">
+          <option value="" disabled selected>Only Child</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+        <label for="files">Upload Father/Mother/Guardian Income Proof</label>
+        <input type="file" name="iproof" placeholder="Income Proof" />
+
+        <input
+          type="button"
+          name="previous"
+          class="previous action-button"
+          value="Previous"
+        />
+
+        <input
+          type="button"
+          name="next"
+          class="next action-button"
+          value="Next"
+        />
+      </fieldset>
+
+      <fieldset>
+        <h2 class="fs-title">Academics Qualifications</h2>
+        <input
+          type="number"
+          name="pyear"
+          placeholder="Previous Year Percentage"
+          min="0"
+          max="100"
+        />
+        <input
+          type="number"
+          name="ten"
+          placeholder="Percentage in 10th"
+          min="0"
+          max="100"
+        />
+        <input type="number" name="twelve" placeholder="Percentage in 12th" />
+        <label for="files">Diploma Result</label>
+        <input
+          type="number"
+          name="dfirst"
+          placeholder="Percentage in 1st Year"
+        />
+        <input
+          type="number"
+          name="dsecond"
+          placeholder="Percentage in 2nd Year"
+        />
+        <input type="number" name="od" placeholder="Overall Percentage" />
+
+        <label for="files">Graduation Result</label>
+        <input
+          type="number"
+          name="gfirst"
+          placeholder="Percentage in 1st Year"
+        />
+        <input
+          type="number"
+          name="gsecond"
+          placeholder="Percentage in 2nd Year"
+        />
+        <input
+          type="number"
+          name="gthird"
+          placeholder="Percentage in 3rd Year"
+        />
+        <input
+          type="number"
+          name="gfourth"
+          placeholder="Percentage in 4th Year"
+        />
+        <input type="text" name="og" placeholder="Overall Percentage" />
+
+        <label for="files">Upload Previous Year Marksheet</label>
+        <input type="file" name="docprevious" />
+
+        <label for="files">Upload 10th Marksheet</label>
+        <input type="file" name="doctenth" />
+
+        <label for="files">Upload 12th Marksheet</label>
+        <input type="file" name="doctwelth" />
+
+        <label for="files">Upload Diploma Result</label>
+        <input type="file" name="docdiploma" />
+
+        <label for="files">Upload Graduation Result</label>
+        <input type="file" name="docgraduation" />
+
+        <input
+          type="button"
+          name="previous"
+          class="previous action-button"
+          value="Previous"
+        />
+        <input
+          type="submit"
+          name="submit"
+          class="submit action-button"
+          value="Submit"
+        />
+      </fieldset>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script>
+      var current_fs, next_fs, previous_fs;
+      var left, opacity, scale;
+      var animating;
+      $(".next").click(function () {
+        if (animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+        $("#progressbar li")
+          .eq($("fieldset").index(next_fs))
+          .addClass("active");
+        next_fs.show();
+        current_fs.animate(
+          { opacity: 0 },
+          {
+            step: function (now, mx) {
+              scale = 1 - (1 - now) * 0.2;
+              left = now * 50 + "%";
+              opacity = 1 - now;
+              current_fs.css({
+                transform: "scale(" + scale + ")",
+                position: "absolute",
+              });
+              next_fs.css({ left: left, opacity: opacity });
+            },
+            duration: 800,
+            complete: function () {
+              current_fs.hide();
+              animating = false;
+            },
+            easing: "easeInOutBack",
+          }
+        );
+      });
+
+      $(".previous").click(function () {
+        if (animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+        $("#progressbar li")
+          .eq($("fieldset").index(current_fs))
+          .removeClass("active");
+
+        previous_fs.show();
+        current_fs.animate(
+          { opacity: 0 },
+          {
+            step: function (now, mx) {
+              scale = 0.8 + (1 - now) * 0.2;
+              left = (1 - now) * 50 + "%";
+              opacity = 1 - now;
+              current_fs.css({ left: left });
+              previous_fs.css({
+                transform: "scale(" + scale + ")",
+                opacity: opacity,
+              });
+            },
+            duration: 800,
+            complete: function () {
+              current_fs.hide();
+              animating = false;
+            },
+            easing: "easeInOutBack",
+          }
+        );
+      });
+
+      $(".submit").click(function () {
+        return false;
+      });
+    </script>
+  </body>
+</html>
